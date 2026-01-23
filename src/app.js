@@ -23,5 +23,9 @@ const authRoutes = require('./routes/auth.routes');
 app.use('/api/auth', authRoutes);
 app.use('/api/designs', designRoutes);
 
+app.get("/ping", (req, res) => {
+  res.status(200).send("ok");
+});
+
 
 module.exports = app;
